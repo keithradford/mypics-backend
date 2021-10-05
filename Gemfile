@@ -42,3 +42,7 @@ group :development do
   # Any existing code
   gem 'graphiql-rails'
 end
+
+gem 'sass-rails'
+gem 'uglifier'
+gem 'coffee-rails'
