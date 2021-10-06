@@ -3,7 +3,8 @@ module Types
     field :id, ID, null: false
     field :width, Integer, null: true
     field :height, Integer, null: true
-    field :urls, Types::Input::UrlInputType, null: true
+    field :regularUrl, String, null: true
+    field :smallUrl, String, null: true
 
     field :user, Types::UserType, null: true, method: :user
   end

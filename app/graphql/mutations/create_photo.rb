@@ -10,7 +10,8 @@ module Mutations
             Photo.create!(
                 width: width,
                 height: height,
-                urls: urls,
+                smallUrl: urls.small,
+                regularUrl: urls.regular,
                 user: context[:current_user]
             )
         end

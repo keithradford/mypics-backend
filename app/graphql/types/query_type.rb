@@ -1,22 +1,30 @@
 module Types
   class QueryType < Types::BaseObject
-    # 1 - Adding users
+    # Fetching all users
     field :users, [Types::UserType], null: false
 
-    # 1.1 Users Query
     def users
       User.all
     end
 
-    # 2 - Adding one user
+    # Fetching a given user
     field :user, Types::UserType, null: false do
       # Passing arguemts used to identify user
       argument :id, ID, required: true
     end
 
-    # 2.1 - User Query
     def user(id:)
       User.find(id)
+    end
+
+    # Fetching photos for a given user
+    field :photos, [Types::PhotoType], null: false do
+      # Passing arguemts used to identify user
+      argument :id, ID, required: true
+    end
+
+    def photos(id:)
+      User.find(id).photos
     end
   end
 end

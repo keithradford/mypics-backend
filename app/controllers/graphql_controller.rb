@@ -8,11 +8,7 @@ class GraphqlController < ApplicationController
       session: session,
       current_user: current_user
     }
-    puts "zsfadlfhasjdhg"
-    puts session[:token]
     result = MypicsBackendSchema.execute(query, variables: variables, context: context, operation_name: operation_name)
-    puts "ahhhhhhhhhhhhhhhhhhh"
-    puts session[:token]
     render json: result
   rescue => e
     raise e unless Rails.env.development?
@@ -23,8 +19,6 @@ class GraphqlController < ApplicationController
 
   # gets current user from token stored in the session
   def current_user
-    puts "yoyoyo"
-    puts session[:token]
     # if we want to change the sign-in strategy, this is the place to do it
     return unless session[:token]
 

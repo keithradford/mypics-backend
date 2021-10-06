@@ -23,9 +23,6 @@ module Mutations
 
             context[:session][:token] = token
 
-    puts "yoyoy222o"
-    puts context[:session][:token]
-
             { user: user, token: token }
         end
     end

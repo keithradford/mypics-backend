@@ -1,24 +1,9 @@
-# README
+# myPics Backend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+myPics Backend is a GraphQL-powered Ruby on Rails API for the [myPics image repository website](https://github.com/keithradford/image-repository). It allows for the creation of accounts on the website providing users with the opportunity to have their saved images and topics persist between devices.
 
-Things you may want to cover:
+## Todo
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Flesh out README
+- Write tests
+- Deploy
